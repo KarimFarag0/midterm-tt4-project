@@ -1,0 +1,77 @@
+// index.scss
+
+// Dependencies
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/mixins";
+
+// Card
+@import "./node_modules/bootstrap/scss/card";
+
+// Alert
+@import "./node_modules/bootstrap/scss/alert";
+
+/* Make sure the container stretches and has padding */
+.container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+.card {
+    margin-bottom: 20px;
+}
+
+.card-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Style for the sidebar */
+#sidebar-wrapper {
+    width: 250px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    background-color: #f8f9fa;
+}
+
+.sidebar-heading {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 15px;
+    background-color: #e9ecef;
+}
+
+.list-group-item {
+    padding: 10px;
+}
+
+.list-group-item-action {
+    color: #495057;
+    text-decoration: none;
+}
+
+.list-group-item-light {
+    background-color: #f8f9fa;
+}
+
+/* Ensure the row displays properly on different screen sizes */
+.row {
+    margin-left: 250px; /* Offset the sidebar */
+    padding: 20px;
+}
+
+@media (max-width: 767px) {
+    .row {
+        margin-left: 0;
+    }
+
+    #sidebar-wrapper {
+        width: 100%;
+        position: relative;
+        height: auto;
+    }
+}
+
